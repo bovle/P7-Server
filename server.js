@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 3000;
+var port = process.env.PORT||3000; //which you can run both on Azure or local
 var bodyParser = require('body-parser');
 var dict = {};
 app.use(bodyParser.urlencoded({extended:true}));
